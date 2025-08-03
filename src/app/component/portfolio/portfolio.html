@@ -1,0 +1,26 @@
+<section class="portfolio-section text-center py-5 pt-5 mt-5" id="portfolio">
+  <div class="container pt-5 mt-3">
+    <h2 class="section-title text-uppercase mb-3 text-uppercase fs-1">portfolio component
+
+</h2>
+
+    <div class="star-line mb-3 d-flex align-items-center justify-content-center">
+      <span class="line"></span>
+      <i class="fas fa-star mx-3"></i>
+      <span class="line"></span>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4" *ngFor="let image of portfolioImages">
+        <div class="portfolio-item position-relative" (click)="openImage(image)">
+          <img [src]="image" class="img-fluid rounded shadow-sm" alt="Work" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for lightbox -->
+    <div class="modal-backdrop" *ngIf="selectedImage" (click)="closeImage()">
+      <img [src]="selectedImage" class="modal-img" alt="Expanded" />
+    </div>
+  </div>
+</section>

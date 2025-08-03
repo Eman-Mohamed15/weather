@@ -1,0 +1,18 @@
+.home {
+  background-color: #1abc9c;
+}
+
+.avatar {
+  width: 250px;
+}
+
+.star-line .line {
+  width: 100px;
+  height: 4px;
+  background-color: white;
+}
+
+.star-line i {
+  color: white;
+  font-size: 1.5rem;
+}
